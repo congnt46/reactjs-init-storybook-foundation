@@ -2,6 +2,7 @@
 
 ## Quick Start
 
+Please make sure your machine is running on Node.js v14.15.0.
 The documentation and demo of the core components can be launched with the help of Storybook. Just run
 
 ```bash
