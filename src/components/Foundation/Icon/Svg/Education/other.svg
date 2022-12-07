@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>366E23EE-BE0B-4B98-B1D5-8D3D264AC3DF</title>
+    <g id="Stylesheet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="inner" transform="translate(3.000000, 6.000000)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.92307692">
+            <rect id="Rectangle" x="0" y="4.80769231" width="25" height="15.3846154"></rect>
+            <circle id="Oval" cx="7.69230769" cy="10.5769231" r="1.92307692"></circle>
+            <path d="M3.84615385,16.3461538 C3.84615385,14.2307692 5.57692308,12.5 7.69230769,12.5 C9.80769231,12.5 11.5384615,14.2307692 11.5384615,16.3461538" id="Path"></path>
+            <line x1="15.3846154" y1="10.5769231" x2="21.1538462" y2="10.5769231" id="Path"></line>
+            <line x1="18.2692308" y1="14.4230769" x2="21.1538462" y2="14.4230769" id="Path"></line>
+            <path d="M16.3461538,4.80769231 L8.65384615,4.80769231 L8.65384615,3.84615385 C8.65384615,1.73076923 10.3846154,0 12.5,0 L12.5,0 C14.6153846,0 16.3461538,1.73076923 16.3461538,3.84615385 L16.3461538,4.80769231 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

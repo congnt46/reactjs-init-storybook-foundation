@@ -1,0 +1,22 @@
+$legend-item-color-size: 16px;
+
+.legend-group {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  &__key {
+    align-items: center;
+    display: flex;
+    margin-right: $spacing-6px;
+
+    &-color {
+      @include box-shadow-softer;
+      border: $border-2px solid $color-white;
+      border-radius: 50%;
+      height: $legend-item-color-size;
+      margin-right: $spacing-8px;
+      width: $legend-item-color-size;
+    }
+  }
+}

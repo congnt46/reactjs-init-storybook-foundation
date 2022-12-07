@@ -1,0 +1,27 @@
+$avatar-size-small: 24px;
+$avatar-size-medium: 36px;
+$avatar-size-large: 48px;
+
+@mixin avatar-size($size) {
+  height: $size;
+  width: $size;
+}
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    border-radius: 50%;
+    height: auto;
+    width: 100%;
+  }
+  &--large {
+    @include avatar-size($avatar-size-large);
+  }
+  &--medium {
+    @include avatar-size($avatar-size-medium);
+  }
+  &--small {
+    @include avatar-size($avatar-size-small);
+  }
+}

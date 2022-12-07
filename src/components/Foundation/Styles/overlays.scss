@@ -1,0 +1,41 @@
+// Overlay black
+$overlay-black-softer: rgba(10, 10, 10, 0.2);
+$overlay-black-soft: rgba(10, 10, 10, 0.4);
+$overlay-black-medium: rgba(10, 10, 10, 0.6);
+$overlay-black-strong: rgba(10, 10, 10, 0.8);
+$overlay-black-stronger: $color-black;
+
+// Overlay white
+$overlay-white-softer: rgba(255, 255, 255, 0.2);
+$overlay-white-soft: rgba(255, 255, 255, 0.4);
+$overlay-white-medium: rgba(255, 255, 255, 0.6);
+$overlay-white-strong: rgba(255, 255, 255, 0.8);
+$overlay-white-stronger: $color-white;
+
+// Overlay primary
+$overlay-primary-softer: rgba(158, 0, 89, 0.2);
+$overlay-primary-soft: rgba(158, 0, 89, 0.4);
+$overlay-primary-medium: rgba(158, 0, 89, 0.6);
+$overlay-primary-strong: rgba(158, 0, 89, 0.8);
+$overlay-primary-stronger: $color-primary;
+
+// Overlay secondary
+$overlay-secondary-softer: rgba(236, 189, 0, 0.2);
+$overlay-secondary-soft: rgba(236, 189, 0, 0.4);
+$overlay-secondary-medium: rgba(236, 189, 0, 0.6);
+$overlay-secondary-strong: rgba(236, 189, 0, 0.8);
+$overlay-secondary-stronger: $color-secondary;
+
+// Overlay success
+$overlay-success-softer: rgba(45, 161, 25, 0.2);
+$overlay-success-soft: rgba(45, 161, 25, 0.4);
+$overlay-success-medium: rgba(45, 161, 25, 0.6);
+$overlay-success-strong: rgba(45, 161, 25, 0.8);
+$overlay-success-stronger: $color-success;
+
+// Overlay error
+$overlay-error-softer: rgba(183, 19, 28, 0.2);
+$overlay-error-soft: rgba(183, 19, 28, 0.4);
+$overlay-error-medium: rgba(183, 19, 28, 0.6);
+$overlay-error-strong: rgba(183, 19, 28, 0.8);
+$overlay-error-stronger: $color-error;

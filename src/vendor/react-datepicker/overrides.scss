@@ -1,0 +1,106 @@
+$datepicker-width: 250px;
+$datepicker-corner-radius: 10px;
+$day-box-size: 32px;
+$datepicker-navigation-height: 40px;
+$weekday-row-height: 24px;
+$weekday-row-width: 32px;
+$weekday-font-size: 9px;
+
+.react-datepicker-popper {
+  z-index: 4;
+}
+
+.custom-datepicker {
+  @include text;
+  @include box-shadow-strong;
+  background-color: $color-white;
+  border: none;
+  border-radius: $datepicker-corner-radius;
+  width: $datepicker-width;
+
+  &>div {
+    width: 100%;
+  }
+
+  .react-datepicker__header--custom {
+    background-color: $color-white;
+    padding: 0;
+  }
+
+  &__selections, &__navigation {
+    align-items: center;
+    display: flex;
+    flex: 1;
+  }
+}
+
+.custom-datepicker__day {
+  @include text-semibold;
+  @include text-small;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 50%;
+  color: $color-black;
+  display: inline-flex;
+  height: $day-box-size;
+  justify-content: center;
+  margin: 0;
+  width: $day-box-size;
+  &:not(.disabled):hover {
+    background-color: $color-gray-light;
+    border-radius: 50%;
+  }
+  &.blurred, &.disabled {
+    color: $color-gray;
+  }
+  &.selected {
+    background-color: $color-secondary-light;
+  }
+  &--today {
+    background-color: transparent;
+    font-weight: normal;
+  }
+}
+
+.custom-datepicker__header {
+  background-color: $color-white;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.custom-datepicker__navigation {
+  align-items: center;
+  border-bottom: $border-gray-light-dashed;
+  border-top: $border-gray-light;
+  flex-basis: auto;
+  height: $datepicker-navigation-height;
+  justify-content: space-between;
+  padding: 0 $spacing-16px;
+}
+
+.custom-datepicker__selections {
+  @include box-shadow-softer;
+  padding: $spacing-12px $spacing-10px $spacing-12px $spacing-4px;
+  .select {
+    padding: $spacing-2px $spacing-6px $spacing-2px $spacing-12px;
+  }
+}
+
+.custom-datepicker__weekday {
+  @include text-bold;
+  color: $color-gray;
+  font-size: $weekday-font-size;
+  height: $weekday-row-height;
+  margin: $spacing-8px 0;
+  text-transform: uppercase;
+  width: $weekday-row-width;
+}
+
+.custom-datepicker__years .option {
+  justify-content: center;
+}
+
+.custom-datepicker-popper[data-placement^='bottom'] {
+  margin-top: 0;
+}

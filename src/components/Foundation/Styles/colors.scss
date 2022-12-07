@@ -1,0 +1,120 @@
+// Primary colors
+$color-primary-lightest: #E7C0D6;
+$color-primary-lighter: #CF80AC;
+$color-primary-light: #B74083;
+$color-primary: #9E0059;
+$color-primary-dark: #760043;
+$color-primary-darker: #4F002D;
+$color-primary-darkest: #280017;
+
+// Secondary colors
+$color-secondary-lightest: #FAEEBF;
+$color-secondary-lighter: #F5DE7F;
+$color-secondary-light: #F0CD3F;
+$color-secondary: #ECBD00;
+$color-secondary-dark: #B18D00;
+$color-secondary-darker: #765E00;
+$color-secondary-darkest: #3B2F00;
+
+// Tertiary 1 colors
+$color-tertiary-1-lightest: #FDDBC7;
+$color-tertiary-1-lighter: #FBB68F;
+$color-tertiary-1-light: #F99156;
+$color-tertiary-1: #F76D1E;
+$color-tertiary-1-dark: #BA5217;
+$color-tertiary-1-darker: #7C370F;
+$color-tertiary-1-darkest: #3E1B07;
+
+// Tertiary 2 colors
+$color-tertiary-2-lightest: #C1D0E8;
+$color-tertiary-2-lighter: #83A1D2;
+$color-tertiary-2-light: #4572BC;
+$color-tertiary-2: #0843A6;
+$color-tertiary-2-dark: #06327C;
+$color-tertiary-2-darker: #042253;
+$color-tertiary-2-darkest: #02112A;
+
+// Error colors
+$color-error-lightest: #EDC5C7;
+$color-error-lighter: #DB888D;
+$color-error-light: #C94E55;
+$color-error: #B7131C;
+$color-error-dark: #890E15;
+$color-error-darker: #5B090E;
+$color-error-darkest: #2E0507;
+
+// Success colors
+$color-success-lightest: #CBE8C6;
+$color-success-lighter: #96D08C;
+$color-success-light: #62B953;
+$color-success: #2DA119;
+$color-success-dark: #227813;
+$color-success-darker: #17500D;
+$color-success-darkest: #0B2806;
+
+// Gray colors
+$color-gray-lightest: #FDFDFD;
+$color-gray-lighter: #F4F4F4;
+$color-gray-light: #DEDEDE;
+$color-gray: #757575;
+$color-gray-dark: #4F4F4F;
+$color-gray-darker: #373737;
+$color-gray-darkest: #202020;
+
+// Basic colors
+$color-white: #FFFFFF;
+$color-black: #0A0A0A;
+
+$theme-colors: (
+  'primary': $color-primary,
+  'primary-light': $color-primary-light,
+  'primary-lighter': $color-primary-lighter,
+  'primary-lightest': $color-primary-lightest,
+  'primary-dark': $color-primary-dark,
+  'primary-darker': $color-primary-darker,
+  'primary-darkest': $color-primary-darkest,
+  'secondary': $color-secondary,
+  'secondary-light': $color-secondary-light,
+  'secondary-lighter': $color-secondary-lighter,
+  'secondary-lightest': $color-secondary-lightest,
+  'secondary-dark': $color-secondary-dark,
+  'secondary-darker': $color-secondary-darker,
+  'secondary-darkest': $color-secondary-darkest,
+  'tertiary-1': $color-tertiary-1,
+  'tertiary-1-light': $color-tertiary-1-light,
+  'tertiary-1-lighter': $color-tertiary-1-lighter,
+  'tertiary-1-lightest': $color-tertiary-1-lightest,
+  'tertiary-1-dark': $color-tertiary-1-dark,
+  'tertiary-1-darker': $color-tertiary-1-darker,
+  'tertiary-1-darkest': $color-tertiary-1-darkest,
+  'tertiary-2': $color-tertiary-2,
+  'tertiary-2-light': $color-tertiary-2-light,
+  'tertiary-2-lighter': $color-tertiary-2-lighter,
+  'tertiary-2-lightest': $color-tertiary-2-lightest,
+  'tertiary-2-dark': $color-tertiary-2-dark,
+  'tertiary-2-darker': $color-tertiary-2-darker,
+  'tertiary-2-darkest': $color-tertiary-2-darkest,
+  'error': $color-error,
+  'error-light': $color-error-light,
+  'error-lighter': $color-error-lighter,
+  'error-lightest': $color-error-lightest,
+  'error-dark': $color-error-dark,
+  'error-darker': $color-error-darker,
+  'error-darkest': $color-error-darkest,
+  'success': $color-success,
+  'success-light': $color-success-light,
+  'success-lighter': $color-success-lighter,
+  'success-lightest': $color-success-lightest,
+  'success-dark': $color-success-dark,
+  'success-darker': $color-success-darker,
+  'success-darkest': $color-success-darkest,
+  'gray': $color-gray,
+  'gray-light': $color-gray-light,
+  'gray-lighter': $color-gray-lighter,
+  'gray-lightest': $color-gray-lightest,
+  'gray-dark': $color-gray-dark,
+  'gray-darker': $color-gray-darker,
+  'gray-darkest': $color-gray-darkest,
+  'white': $color-white,
+  'black': $color-black,
+);

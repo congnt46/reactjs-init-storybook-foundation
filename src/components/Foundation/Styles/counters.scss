@@ -1,0 +1,42 @@
+$counter-size: 24px;
+$counter-size-sm: 20px;
+$counter-size-lg: 32px;
+$counter-padding: 5px;
+$counter-padding-sm: 4px;
+$counter-padding-lg: 8px;
+
+@mixin counter-size($size, $padding, $font-size) {
+  font-size: $font-size;
+  height: $size;
+  min-width: $size;
+  padding: $padding;
+}
+
+.counter {
+  @include text-bold;
+  background-color: $color-primary;
+  border-radius: 50%;
+  color: $color-white;
+  display: block;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: center;
+  &--medium {
+    @include counter-size($counter-size, $counter-padding, $text-font-size-small);
+  }
+  &--large {
+    @include counter-size($counter-size-lg, $counter-padding-lg, $text-font-size);
+  }
+  &--small {
+    @include counter-size($counter-size-sm, $counter-padding-sm, $text-font-size-smaller);
+  }
+}
+
+@each $name, $color in $theme-colors {
+  .counter--#{$name} {
+    background-color: $color;
+  }
+  .counter--text--#{$name} {
+    color: $color;
+  }
+}

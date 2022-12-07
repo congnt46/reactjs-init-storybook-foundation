@@ -1,0 +1,233 @@
+$select-corner-radius: 6px;
+$option-height: 32px;
+$label-size-large: 18px;
+$label-size-medium: 16px;
+$label-size-small: 14px;
+$checkbox-size: 18px;
+$option-list-max-height: 280px;
+
+.select {
+  max-width: 100%;
+  position: relative;
+
+  &__head {
+    align-items: center;
+    background-color: $color-white;
+    border: $border-gray-light;
+    border-radius: $select-corner-radius;
+    display: flex;
+    justify-content: space-between;
+    padding: $spacing-6px $spacing-8px $spacing-6px $spacing-12px;
+  }
+
+  &__caret-icon {
+    margin-left: $spacing-6px;
+  }
+
+  &__icon {
+    margin-right: $spacing-8px;
+  }
+
+  &--error {
+    .select {
+      &__icon {
+        color: $color-error;
+      }
+      &__head {
+        border-color: $color-error;
+      }
+    }
+  }
+
+  &__label {
+    color: $color-gray-darker;
+    font-size: $label-size-medium;
+    line-height: 1.1;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &--small {
+    .select__head {
+      padding-bottom: $spacing-2px;
+      padding-top: $spacing-2px;
+    }
+    .select__label {
+      font-size: $label-size-small;
+    }
+    .text {
+      line-height: $text-line-height;
+    }
+  }
+
+  &.disabled {
+    .select {
+      &__icon {
+        color: $color-gray;
+      }
+      &__head {
+        background-color: $color-gray-lighter;
+      }
+    }
+  }
+
+  &.active, &:not(.disabled):hover {
+    .select {
+      &__head {
+        border: $border-gray;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &--large {
+    padding: $spacing-10px $spacing-8px $spacing-10px $spacing-12px;
+    .select__label {
+      font-size: $label-size-large;
+    }
+  }
+
+  &__options {
+    @include box-shadow-medium;
+    @include hide-scrollbar;
+    background-color: $color-white;
+    border-radius: $select-corner-radius;
+    display: none;
+    left: 0;
+    list-style-type: none;
+    margin-top: $spacing-1px;
+    max-height: $option-list-max-height;
+    overflow-y: scroll;
+    padding: $spacing-8px 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 100;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__multi {
+    &-header, &-footer {
+      display: flex;
+      font-size: $text-font-size;
+      justify-content: space-between;
+    }
+
+    &-header {
+      border-bottom: $border-1px solid $color-gray-light;
+      margin-bottom: $spacing-12px;
+      padding: $spacing-2px $spacing-12px $spacing-10px;
+    }
+
+    &-footer {
+      border-top: $border-1px solid $color-gray-light;
+      margin-top: $spacing-12px;
+      padding: $spacing-10px $spacing-12px $spacing-2px;
+    }
+
+    &-submit {
+      flex: 1;
+
+      &.btn {
+        padding-bottom: $spacing-6px;
+        padding-top: $spacing-6px;
+      }
+    }
+
+    &-select-all {
+      background-color: transparent;
+      border: none;
+      color: $color-primary;
+    }
+  }
+}
+
+.option {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: $select-corner-radius;
+  color: $color-gray-darkest;
+  cursor: pointer;
+  display: flex;
+  height: $option-height;
+  margin: 0 $spacing-8px;
+  outline: none;
+  padding: 0 $spacing-8px;
+
+  .text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $color-gray-lighter;
+  }
+
+  &__hint {
+    color: $color-gray;
+    margin-left: $spacing-8px;
+  }
+
+  &__icon {
+    color: $color-gray;
+    margin-right: $spacing-8px;
+  }
+
+  &__multi {
+    margin: 0 $spacing-12px;
+
+    &-checkbox-icon {
+      align-items: center;
+      color: $color-gray-darkest;
+      display: flex;
+      height: $checkbox-size;
+      margin: 0 $spacing-6px -$spacing-2px 0;
+      width: $checkbox-size;
+
+    }
+  }
+
+  &.nested {
+    margin-left: $spacing-28px;
+  }
+
+  &.selected {
+    background-color: $color-secondary-light;
+
+    &.multiple {
+      background-color: transparent;
+      &:hover {
+        background-color: $color-gray-lighter;
+      }
+    }
+
+    .option {
+      &__hint {
+        color: $color-gray-darkest;
+      }
+
+      &__icon {
+        color: $color-black;
+      }
+
+      &__multi {
+        &-checkbox-icon {
+          color: $color-tertiary-2;
+        }
+      }
+    }
+  }
+}

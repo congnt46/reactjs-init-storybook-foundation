@@ -1,0 +1,22 @@
+@import 'vendor/bootstrap/index.scss';
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+@import 'components/Foundation/Styles/index.scss';
+@import 'vendor/react-datepicker/index.scss';
+@import 'vendor/react-toastify/index.scss';
+@import 'vendor/rc-slider/index.scss';
+
+.bg-red {
+  background-color: red;
+}
+.minh-0 {
+  min-height: 0;
+}
+.clickable:hover {
+  cursor: pointer;
+}
+
+html,
+body,
+#root {
+  height: 100% !important;
+}

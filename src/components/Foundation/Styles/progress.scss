@@ -1,0 +1,12 @@
+$progress-height: 8px;
+$progress-corner-radius: 4px;
+
+.progress {
+  background-color: $color-tertiary-2-lightest;
+  border-radius: $progress-corner-radius;
+  height: $progress-height;
+  width: 100%;
+  &__bar {
+    background-color: $color-tertiary-2;
+  }
+}

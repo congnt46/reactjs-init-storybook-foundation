@@ -1,0 +1,59 @@
+$popup-corner-radius: 10px;
+$context-menu-item-height: 40px;
+$context-menu-min-width: 120px;
+
+.context-menu-container {
+  position: relative;
+}
+
+.context-menu-trigger {
+  display: initial;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.context-menu {
+  @include box-shadow-medium;
+  background-color: $color-white;
+  border-radius: $popup-corner-radius;
+  display: flex;
+  flex-direction: column;
+  min-width: $context-menu-min-width;
+  padding: $spacing-8px 0;
+  position: absolute;
+  transform: translate(-9999px);
+  z-index: 99;
+  &.open {
+    transform: none;
+  }
+}
+
+.context-menu__item {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  height: $context-menu-item-height;
+  padding: 0 $spacing-14px;
+  &:hover {
+    background-color: $color-gray-lighter;
+  }
+  &:focus {
+    outline: none;
+  }
+  p {
+    white-space: nowrap;
+  }
+}
+
+.context-menu__separator {
+  background-color: $color-gray-light;
+  margin-bottom: $spacing-8px;
+  margin-top: $spacing-8px;
+  width: 100%;
+}
+
+.context-menu__icon {
+  margin-right: $spacing-10px;
+}

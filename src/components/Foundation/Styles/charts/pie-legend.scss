@@ -1,0 +1,78 @@
+$legend-sub-chart-min-width: 215px;
+$legend-list-spacing: 40px;
+$sub-chart-size: 58px;
+$min-list-width: 148px;
+
+.pie-legend {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  &__label {
+    margin-bottom: $spacing-8px;
+  }
+
+  &__content {
+    display: flex;
+
+    &-wrapper {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      padding: $spacing-24px 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: flex-start;
+    margin: 0;
+    min-width: $min-list-width;
+
+    &:not(:first-child) {
+      margin-left: $legend-list-spacing;
+    }
+  }
+
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: $spacing-8px;
+    }
+  }
+
+  &__sub-chart {
+    &-container {
+      height: $sub-chart-size;
+      width: $sub-chart-size;
+    }
+
+    &-list {
+      border-left: $border-1px solid $color-gray-light;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-width: $legend-sub-chart-min-width;
+    }
+
+    &-item {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      padding: $spacing-16px;
+
+      &:not(:first-child) {
+        border-top: $border-1px solid $color-gray-light;
+      }
+    }
+
+    &-label {
+      margin-left: $spacing-16px;
+    }
+  }
+}

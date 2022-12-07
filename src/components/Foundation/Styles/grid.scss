@@ -1,0 +1,32 @@
+// Bootstrap overrides
+$pdg-grid-gutter-width: 24px;
+$pdg-box-corner-radius: 16px;
+
+.grid-viewport-fullheight-row {
+  min-height: 0;
+
+  & .col,
+  & > [class*='col-'] {
+    max-height: 100%;
+    overflow-y: auto;
+  }
+}
+
+.col-overlap-left {
+  background-color: white;
+  border-bottom-right-radius: $pdg-box-corner-radius;
+  border-top-right-radius: $pdg-box-corner-radius;
+  margin-right: -$pdg-grid-gutter-width;
+  position: relative;
+  z-index: 1;
+}
+
+.col-attached-left {
+  border-bottom-right-radius: $pdg-box-corner-radius;
+  border-top-right-radius: $pdg-box-corner-radius;
+  height: 100%;
+  left: 0;
+  position: absolute !important;
+  top: 0;
+  z-index: 9;
+}

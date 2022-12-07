@@ -1,0 +1,25 @@
+$suggestion-corner-radius: 6px;
+
+.autocomplete {
+  position: relative;
+  z-index: 2;
+}
+
+.autocomplete__list {
+  @include box-shadow-medium;
+  background-color: $color-white;
+  border-radius: $suggestion-corner-radius;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  padding: $spacing-8px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.autocomplete__item {
+  &:hover, &.active {
+    background-color: $color-gray-lighter;
+  }
+}

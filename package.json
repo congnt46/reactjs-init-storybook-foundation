@@ -1,0 +1,161 @@
+{
+  "name": "reactjs-init-storybook-foundation",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "classnames": "^2.2.6",
+    "date-fns": "^2.16.1",
+    "font-awesome": "^4.7.0",
+    "formik": "^2.2.3",
+    "i18next": "^19.8.3",
+    "lodash": "^4.17.20",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "rc-slider": "^9.6.4",
+    "react": "^16.13.1",
+    "react-datepicker": "^3.3.0",
+    "react-dom": "^16.13.1",
+    "react-i18next": "^11.7.3",
+    "react-rating-stars-component": "^2.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "react-toastify": "^6.1.0",
+    "react-tooltip": "^4.2.10",
+    "recharts": "^1.8.5",
+    "yup": "^0.32.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "lint:js": "eslint \"src/**/*.js\"",
+    "lint:css": "stylelint \"src/**/*.scss\"",
+    "storybook": "start-storybook -p 6006 -s public --no-dll",
+    "build-storybook": "build-storybook -s public --no-dll"
+  },
+  "eslintConfig": {
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "moduleDirectory": [
+            "node_modules",
+            "src/"
+          ]
+        }
+      }
+    },
+    "extends": [
+      "plugin:@shopify/esnext",
+      "plugin:@shopify/react"
+    ],
+    "rules": {
+      "consistent-this": [
+        "error",
+        "that"
+      ],
+      "no-warning-comments": 0,
+      "babel/object-curly-spacing": [
+        "error",
+        "always",
+        {
+          "objectsInObjects": false
+        }
+      ],
+      "require-await": "error",
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "jsx-quotes": [
+        "error",
+        "prefer-double"
+      ],
+      "line-comment-position": [
+        "off"
+      ],
+      "react/function-component-definition": [
+        "error",
+        {
+          "namedComponents": "function-declaration",
+          "unnamedComponents": "arrow-function"
+        }
+      ],
+      "eslint-comments/no-unlimited-disable": "off",
+      "@shopify/strict-component-boundaries": "off",
+      "@shopify/images-no-direct-imports": "off",
+      "@shopify/jsx-no-hardcoded-content": "off",
+      "@shopify/jsx-prefer-fragment-wrappers": "off",
+      "jsx-a11y/label-has-for": "off",
+      "jsx-a11y/label-has-associated-control": [
+        "error",
+        {
+          "assert": "either"
+        }
+      ],
+      "babel/camelcase": "off",
+      "camelcase": [
+        "error",
+        {
+          "properties": "always"
+        }
+      ],
+      "import/order": "off",
+      "promise/no-nesting": "off",
+      "default-case": "off"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run lint:js -- --fix"
+    ],
+    "*.scss": [
+      "npm run lint:css -- --fix"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@shopify/eslint-plugin": "^39.0.1",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
+    "@storybook/node-logger": "^6.0.28",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.28",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "babel-loader": "8.3.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "react-is": "^17.0.1",
+    "react-test-renderer": "^16.13.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
+  }
+}

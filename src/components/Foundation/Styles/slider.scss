@@ -1,0 +1,14 @@
+$slider-container-height: 40px;
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: $slider-container-height;
+  justify-content: center;
+
+  .rc-slider-handle {
+    background: url('../../../assets/images/slider-handle.png') no-repeat center;
+    background-size: contain;
+  }
+}

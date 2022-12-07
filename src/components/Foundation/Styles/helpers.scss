@@ -1,0 +1,35 @@
+$t-default-delay: 120ms;
+$t-default-bezier: cubic-bezier(.455, .03, .515, .955);
+
+@mixin container-center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-center {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+@mixin transition($delay, $ease, $props...) {
+  transition: all $delay $ease;
+  transition-property: $props;
+}
+
+@mixin hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
+  }
+}

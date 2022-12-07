@@ -1,0 +1,48 @@
+.numeric-input {
+  display: flex;
+
+  &_center {
+    .input__field {
+      text-align: center;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+
+    &--prefixed {
+      .input__field {
+        text-align: right;
+      }
+    }
+  }
+
+  &__prefix {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    left: $spacing-12px;
+    padding-right: $spacing-16px;
+    position: absolute;
+    z-index: 8;
+  }
+
+  &__stepper {
+    &.btn {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+
+    &:first-child {
+      margin-right: $spacing-8px;
+    }
+
+    &:last-child {
+      margin-left: $spacing-8px;
+    }
+  }
+}

@@ -1,0 +1,194 @@
+$btn-primary: (
+  'background': $color-primary,
+  'active': $color-primary-dark,
+  'disabled': $color-primary-light,
+);
+$btn-alternative: (
+  'background': $color-gray-lighter,
+  'active': $color-gray-light,
+  'disabled': $color-white,
+);
+$btn-success: (
+  'background': $color-success,
+  'active': $color-success-dark,
+  'disabled': $color-success-light,
+);
+$btn-error: (
+  'background': $color-error,
+  'active': $color-error-dark,
+  'disabled': $color-error-light,
+);
+$btn-colors: (
+  'primary': $btn-primary,
+  'alternative': $btn-alternative,
+  'success': $btn-success,
+  'error': $btn-error,
+);
+
+$btn-border-radius: 8px;
+$btn-border-radius-small: 6px;
+$btn-padding-x: 16px;
+$btn-padding-y: 10px;
+$btn-padding-x-sm: 12px;
+$btn-padding-y-sm: 6px;
+$btn-padding-x-lg: 24px;
+$btn-padding-y-lg: 14px;
+$btn-round-medium: 40px;
+$btn-round-small: 28px;
+$btn-round-large: 56px;
+$btn-height-sm: 30px;
+
+@mixin btn-base($bg) {
+  @include transition(0.15s, linear, all);
+  align-items: center;
+  background-color: $bg;
+  border-color: transparent;
+  color: $color-white;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin btn($default, $active, $disabled) {
+  @include btn-base($default);
+
+  > .btn-icon {
+    .icon {
+      color: $color-white;
+    }
+    &--left {
+      margin-right: $spacing-8px;
+    }
+    &--right {
+      margin-left: $spacing-8px;
+    }
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: $disabled;
+    border-color: transparent;
+    color: rgba(255, 255, 255, 0.66);
+  }
+
+  &:not(:disabled):not(.disabled) {
+    &:hover {
+      @include box-shadow-soft;
+      @include btn-base($default);
+      opacity: 0.8;
+    }
+    &:focus,
+    &:active,
+    &:focus:active,
+    &.active {
+      @include box-shadow-softer-inset;
+      background-color: $active;
+      border-color: transparent;
+    }
+  }
+}
+
+@each $type, $btn-style in $btn-colors {
+  .btn-#{$type} {
+    @include btn(
+      map-get($btn-style, 'background'),
+      map-get($btn-style, 'active'),
+      map-get($btn-style, 'disabled')
+    );
+  }
+}
+
+.btn {
+  border-color: transparent;
+  border-radius: $btn-border-radius;
+  display: flex;
+  font-family: $font-family-text-bold;
+  font-size: $text-font-size;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding: $btn-padding-y $btn-padding-x;
+
+  &--full {
+    justify-content: center;
+    width: 100%;
+  }
+
+  &--small {
+    border-radius: $btn-border-radius-small;
+    font-size: $text-font-size-small;
+    height: $btn-height-sm;
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+    > .btn-icon {
+      &--left {
+        margin-right: $spacing-6px;
+      }
+      &--right {
+        margin-left: $spacing-6px;
+      }
+    }
+  }
+
+  &--large {
+    font-size: $text-font-size-large;
+    padding: $btn-padding-y-lg $btn-padding-x-lg;
+  }
+
+  &.btn-alternative {
+    color: $color-gray-dark;
+
+    &:disabled,
+    &.disabled {
+      color: $color-gray-dark;
+    }
+
+    > .btn-icon > .icon {
+      color: $color-gray-dark;
+    }
+
+    &:not(:disabled):not(.disabled):hover {
+      background-color: $color-white;
+      border-color: transparent;
+      color: $color-black;
+      @include box-shadow-soft();
+      > .btn-icon > .icon {
+        color: $color-black;
+      }
+    }
+  }
+
+  &.btn--round {
+    border-radius: 50%;
+    height: $btn-round-medium;
+    width: $btn-round-medium;
+    &.btn--large {
+      height: $btn-round-large;
+      width: $btn-round-large;
+    }
+    &.btn--small {
+      height: $btn-round-small;
+      width: $btn-round-small;
+    }
+  }
+}
+
+a,
+.btn-link {
+  border-radius: 0;
+  color: $color-primary;
+  font-family: $font-family-text-semibold;
+  font-size: $text-font-size;
+  letter-spacing: 0px;
+  padding: 0;
+  &:active,
+  &:focus {
+    border-bottom: 1px dotted $color-gray;
+  }
+
+  &:active,
+  &:focus,
+  &:hover,
+  &:hover:focus {
+    box-shadow: none;
+    color: $color-primary-dark;
+    text-decoration: none;
+  }
+}

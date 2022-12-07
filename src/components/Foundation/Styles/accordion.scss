@@ -1,0 +1,82 @@
+@mixin accordion-transition($expand: true) {
+  @if $expand {
+    transform: rotate(-90deg);
+  } @else {
+    transform: rotate(0deg);
+  }
+  transition: transform 0.1s ease-out;
+}
+
+.accordion {
+  @include box-shadow-soft;
+  background-color: $color-white;
+  border-radius: $spacing-10px;
+  overflow: hidden;
+  width: 100%;
+  &--squared {
+    border-radius: 0;
+  }
+  &-panel {
+    &__body {
+      border-bottom: 1px solid $color-gray-light;
+      overflow: hidden;
+      transition: height 0.25s ease-out;
+      &.hidden {
+        border: none;
+        height: 0 !important;
+        overflow: hidden;
+      }
+    }
+    &__header {
+      @include transition(0.15s, linear, background-color);
+      align-items: center;
+      background-color: $color-gray-lightest;
+      border-bottom: 1px solid $color-gray-light;
+      display: flex;
+      justify-content: space-between;
+      padding: $spacing-12px $spacing-16px;
+      .title, svg, .icon {
+        color: $color-gray-dark;
+      }
+      .icon-expand {
+        @include accordion-transition(true);
+      }
+      &:not(.hidden) {
+        @include box-shadow-soft;
+        background-color: $color-white;
+        .title, svg, .icon {
+          color: $color-black;
+        }
+        .icon-collapse {
+          @include accordion-transition(false);
+          color: $color-primary;
+        }
+      }
+      &:hover {
+        background-color: $color-white;
+        cursor: pointer;
+        .icon-expand {
+          color: $color-primary;
+        }
+      }
+      &.disabled {
+        .icon-expand {
+          display: none;
+        }
+        &:hover {
+          cursor: default;
+        }
+      }
+      .text--caption {
+        margin-left: $spacing-12px;
+      }
+    }
+    &__icon {
+      margin-right: $spacing-10px;
+    }
+  }
+}
+
+.accordion__extra {
+  margin-right: $spacing-28px;
+}

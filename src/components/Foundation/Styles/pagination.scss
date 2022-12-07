@@ -1,0 +1,49 @@
+$button-group-min-width: 440px;
+$pagination-btn-size: 24px;
+
+.pagination {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.pagination__button-group {
+  @extend .pagination;
+  flex: none;
+  min-width: $button-group-min-width;
+}
+
+.pagination__button {
+  align-items: center;
+  background-color: $color-gray-lighter;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  height: $pagination-btn-size;
+  justify-content: center;
+  width: $pagination-btn-size;
+
+  &:focus {
+    outline: none;
+  }
+
+  & + .pagination__button {
+    margin-left: $spacing-8px;
+  }
+
+  &:not(.active):hover {
+    background-color: $color-gray-light;
+  }
+
+  &.active {
+    background-color: $color-tertiary-2;
+    .text {
+      color: $color-white;
+    }
+  }
+}
+
+.pagination__ellipsis {
+  margin: $spacing-2px $spacing-8px 0;
+}

@@ -1,0 +1,26 @@
+.checkbox {
+  &-input.icon-fa {
+    color: $color-gray-dark;
+    margin-right: $spacing-6px;
+    &.checked {
+      color: $color-tertiary-2;
+    }
+  }
+  &-item {
+    align-items: center;
+    display: flex;
+    margin-bottom: $spacing-6px;
+    white-space: break-spaces;
+    &:hover {
+      cursor: pointer;
+      > .checkbox-input.icon-fa:not(.checked) {
+        color: $color-gray-darker;
+      }
+    }
+  }
+  &-label {
+    color: $color-gray-dark;
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+}

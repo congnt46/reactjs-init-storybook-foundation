@@ -1,0 +1,37 @@
+$border-1px: 1px;
+$border-2px: 2px;
+$border-3px: 3px;
+$border-4px: 4px;
+
+// Default borders
+$border-black: $border-1px solid $color-black;
+$border-gray-darkest: $border-1px solid $color-gray-darkest;
+$border-gray-darker: $border-1px solid $color-gray-darker;
+$border-gray-dark: $border-1px solid $color-gray-dark;
+$border-gray: $border-1px solid $color-gray;
+$border-gray-light: $border-1px solid $color-gray-light;
+$border-gray-lighter: $border-1px solid $color-gray-lighter;
+
+// Bold borders
+$border-black-bold: $border-2px solid $color-black;
+$border-gray-darkest-bold: $border-2px solid $color-gray-darkest;
+$border-gray-darker-bold: $border-2px solid $color-gray-darker;
+$border-gray-dark-bold: $border-2px solid $color-gray-dark;
+$border-gray-bold: $border-2px solid $color-gray;
+$border-gray-light-bold: $border-2px solid $color-gray-light;
+
+// Dashed borders
+$border-black-dashed : $border-1px dashed $color-black;
+$border-gray-darkest-dashed: $border-1px dashed $color-gray-darkest;
+$border-gray-darker-dashed: $border-1px dashed $color-gray-darker;
+$border-gray-dark-dashed: $border-1px dashed $color-gray-dark;
+$border-gray-dashed: $border-1px dashed $color-gray;
+$border-gray-light-dashed: $border-1px dashed $color-gray-light;
+
+// Dotted borders
+$border-black-dotted: $border-1px dotted $color-black;
+$border-gray-darkest-dotted: $border-1px dotted $color-gray-darkest;
+$border-gray-darker-dotted: $border-1px dotted $color-gray-darker;
+$border-gray-dark-dotted: $border-1px dotted $color-gray-dark;
+$border-gray-dotted: $border-1px dotted $color-gray;
+$border-gray-light-dotted: $border-1px dotted $color-gray-light;

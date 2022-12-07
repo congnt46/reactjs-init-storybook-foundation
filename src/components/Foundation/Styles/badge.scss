@@ -1,0 +1,11 @@
+$badge-size: 24px;
+
+.badge {
+  align-items: center;
+  background-color: $color-gray-lighter;
+  border-radius: 50%;
+  display: flex;
+  height: $badge-size;
+  justify-content: center;
+  width: $badge-size;
+}

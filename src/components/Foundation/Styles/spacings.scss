@@ -1,0 +1,112 @@
+$spacing-1px: 1px;
+$spacing-2px: 2px;
+$spacing-4px: 4px;
+$spacing-6px: 6px;
+$spacing-8px: 8px;
+$spacing-10px: 10px;
+$spacing-12px: 12px;
+$spacing-14px: 14px;
+$spacing-16px: 16px;
+$spacing-18px: 18px;
+$spacing-20px: 20px;
+$spacing-22px: 22px;
+$spacing-24px: 24px;
+$spacing-28px: 28px;
+$spacing-32px: 32px;
+$spacing-34px: 34px;
+$spacing-36px: 36px;
+$spacing-40px: 40px;
+$spacing-44px: 44px;
+$spacing-48px: 48px;
+$spacing-56px: 56px;
+$spacing-60px: 60px;
+$spacing-64px: 64px;
+$spacing-72px: 72px;
+$spacing-80px: 80px;
+
+// This code generates helper classes for
+// setting spacing right inside HTML.
+// It is a direct alternative to https://getbootstrap.com/docs/4.0/utilities/spacing/#notation
+// e.g.:
+//  .sp-p-1, sp-pr-1, sp-px-1, sp-py-1, etc
+// Full list:
+// .sp-p-{1..20} for padding
+// .sp-p-{t,b,l,r,x,y}-{1..20} for padding at top/bottom/left/right/x/y
+// .sp-m-{1..20} for margin
+// .sp-m{t,b,l,r,x,y}-{1..20} for margin at top/bottom/left/right/x/y
+// .sp-m-n{1..20} for negative margin
+// .sp-m{t,b,l,r,x,y}-n{1..20} for negative margin at top/bottom/left/right/x/y
+$prefix-margin: sp-m;
+$prefix-padding: sp-p;
+$spacers: (
+  1: $spacing-1px,
+  2: $spacing-2px,
+  4: $spacing-4px,
+  6: $spacing-6px,
+  8: $spacing-8px,
+  10: $spacing-10px,
+  12: $spacing-12px,
+  14: $spacing-14px,
+  16: $spacing-16px,
+  20: $spacing-20px,
+  24: $spacing-24px,
+  28: $spacing-28px,
+  32: $spacing-32px,
+  36: $spacing-36px,
+  40: $spacing-40px,
+  44: $spacing-44px,
+  48: $spacing-48px,
+  56: $spacing-56px,
+  60: $spacing-60px,
+  64: $spacing-64px,
+  72: $spacing-72px,
+  80: $spacing-80px,
+);
+@each $prop, $abbrev in (margin: $prefix-margin, padding: $prefix-padding) {
+  @each $size, $length in $spacers {
+    .#{$abbrev}-#{$size} {
+      #{$prop}: $length !important;
+    }
+    .#{$abbrev}t-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-top: $length !important;
+    }
+    .#{$abbrev}r-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-right: $length !important;
+    }
+    .#{$abbrev}b-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-bottom: $length !important;
+    }
+    .#{$abbrev}l-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-left: $length !important;
+    }
+  }
+}
+
+// Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+@each $size, $length in $spacers {
+  @if $size != 0 {
+    .#{$prefix-margin}-n#{$size} {
+      margin: -$length !important;
+    }
+    .#{$prefix-margin}t-n#{$size},
+    .#{$prefix-margin}y-n#{$size} {
+      margin-top: -$length !important;
+    }
+    .#{$prefix-margin}r-n#{$size},
+    .#{$prefix-margin}x-n#{$size} {
+      margin-right: -$length !important;
+    }
+    .#{$prefix-margin}b-n#{$size},
+    .#{$prefix-margin}y-n#{$size} {
+      margin-bottom: -$length !important;
+    }
+    .#{$prefix-margin}l-n#{$size},
+    .#{$prefix-margin}x-n#{$size} {
+      margin-left: -$length !important;
+    }
+  }
+}

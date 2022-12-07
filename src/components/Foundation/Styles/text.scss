@@ -1,0 +1,87 @@
+// Font Sizes
+$text-font-size: 15px;
+$text-font-size-small: 13px;
+$text-font-size-large: 18px;
+$text-font-size-smaller: 11px;
+
+// Line Heights
+$text-line-height: 24px;
+$text-line-height-small: 20px;
+
+// Fonts
+$font-family-text: 'Assistant Regular';
+$font-family-text-semibold: 'Assistant SemiBold';
+$font-family-text-bold: 'Assistant Bold';
+
+@mixin text {
+  font-family: $font-family-text;
+  font-size: $text-font-size;
+  line-height: $text-line-height;
+}
+
+@mixin text-semibold {
+  font-family: $font-family-text-semibold;
+}
+
+@mixin text-bold {
+  font-family: $font-family-text-bold;
+}
+
+@mixin text-small {
+  font-size: $text-font-size-small;
+  line-height: $text-line-height-small;
+}
+
+.text {
+  @include text;
+}
+
+.text--small {
+  @include text-small;
+}
+
+.text--semibold {
+  @include text-semibold;
+}
+
+.text--bold {
+  @include text-bold;
+}
+
+$text-theme-colors: (
+  'white': $color-gray-darkest,
+  'gray': $color-gray,
+  'primary': $color-primary,
+  'black': $color-gray-light,
+);
+
+@each $name, $color in $title-theme-colors {
+  .text--#{$name}-theme {
+    color: $color;
+  }
+}
+
+.text--error-type {
+  @include text-semibold;
+  @include text-small;
+  color: $color-error;
+}
+
+.text--error-type.text--black-theme {
+  color: $color-error-light;
+}
+
+.text--caption {
+  @include text-semibold;
+  @include text-small;
+}
+
+.text--caption.text--black-theme {
+  color: $color-white;
+}
+
+@each $name, $color in $theme-colors {
+  .text--#{$name} {
+    color: $color;
+  }
+}

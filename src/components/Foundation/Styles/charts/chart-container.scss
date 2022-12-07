@@ -1,0 +1,6 @@
+$chart-container-border-radius: 10px;
+
+.chart-container {
+  @include box-shadow-softer;
+  border-radius: $chart-container-border-radius;
+}

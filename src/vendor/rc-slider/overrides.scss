@@ -1,0 +1,26 @@
+$slider-corner-radius: 4px;
+$slider-height: 8px;
+$slider-handle-size: 32px;
+
+.rc-slider-rail {
+  background-color: $color-success-lightest;
+  border-radius: $slider-corner-radius;
+  height: $slider-height;
+}
+
+.rc-slider-track {
+  @extend .rc-slider-rail;
+  background-color: $color-success;
+}
+
+.rc-slider-handle {
+  border: none;
+  height: $slider-handle-size;
+  margin-top: -$spacing-20px;
+  width: $slider-handle-size;
+
+  &.rc-slider-handle-dragging {
+    border: none!important;
+    box-shadow: none!important;
+  }
+}

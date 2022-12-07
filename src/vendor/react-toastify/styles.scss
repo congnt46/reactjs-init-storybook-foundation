@@ -1,0 +1,23 @@
+.Toastify__toast-container {
+  width: auto;
+}
+
+.Toastify__toast {
+  @include box-shadow-strong;
+  align-items: center;
+  border-radius: 8px;
+  font-size: $text-font-size;
+  padding: 0 $spacing-12px;
+  width: auto;
+  &--default {
+    color: $color-black;
+  }
+
+  .toast__btn {
+    margin-left: $spacing-16px;
+  }
+
+  .toast__close-btn {
+    margin-left: $spacing-8px;
+  }
+}

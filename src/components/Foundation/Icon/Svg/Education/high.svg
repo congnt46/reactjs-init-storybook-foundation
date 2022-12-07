@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>7081732E-3024-48ED-BDB7-11C99E662EA0</title>
+    <g id="Stylesheet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="inner" transform="translate(7.000000, 5.000000)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.84615385">
+            <path d="M18.4615385,0 L2.76923077,0 C1.2,0 0,1.2 0,2.76923077 L0,2.76923077 C0,4.33846154 1.2,5.53846154 2.76923077,5.53846154 L18.4615385,5.53846154 L18.4615385,24" id="Path"></path>
+            <path d="M18.4615385,24 L2.76923077,24 C1.2,24 0,22.8 0,21.2307692 L0,21.2307692 L0,2.76923077" id="Path"></path>
+            <line x1="18.4615385" y1="2.76923077" x2="2.76923077" y2="2.76923077" id="Path"></line>
+            <polyline id="Path" points="4.61538462 5.53846154 4.61538462 16.6153846 7.38461538 15.6923077 10.1538462 16.6153846 10.1538462 5.53846154"></polyline>
+        </g>
+    </g>
+</svg>

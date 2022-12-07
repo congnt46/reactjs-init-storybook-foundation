@@ -1,0 +1,62 @@
+@import '../Styles/colors.scss';
+
+$toggle-switch-width: 38px;
+$toggle-switch-height: 24px;
+$slider-size: 20px;
+$before-offset: 2px;
+$transition-distance: 14px;
+
+@mixin toggle-switch-slider {
+  border-radius: $toggle-switch-height;
+  position: absolute;
+  transition: .2s;
+}
+
+.toggle {
+  &-slider {
+    @include toggle-switch-slider;
+    background-color: $color-gray;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    &:before {
+      @include toggle-switch-slider;
+      background-color: $color-white;
+      bottom: $before-offset;
+      content: '';
+      height: $slider-size;
+      left: $before-offset;
+      width: $slider-size;
+    }
+  }
+
+  &-switch {
+    display: inline-block;
+    height: $toggle-switch-height;
+    position: relative;
+    width: $toggle-switch-width;
+
+    input {
+      height: 0;
+      opacity: 0;
+      width: 0;
+      &:checked {
+        + .toggle-slider {
+          background-color: $color-success;
+
+          &:before {
+            transform: translateX($transition-distance);
+          }
+        }
+        &:focus + .toggle-slider {
+          background-color: $color-success-dark;
+        }
+      }
+    }
+  }
+}
+
+

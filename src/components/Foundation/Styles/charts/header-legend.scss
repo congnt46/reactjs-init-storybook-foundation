@@ -1,0 +1,21 @@
+$legend-border-radius: 10px;
+$legend-height: 40px;
+
+.header-legend {
+  background-color: $color-gray-lightest;
+  border-bottom: $border-gray-light;
+  border-top-left-radius: $legend-border-radius;
+  border-top-right-radius: $legend-border-radius;
+  display: flex;
+  height: $legend-height;
+  padding: $spacing-10px $spacing-12px;
+}
+
+.header-legend__group {
+  align-items: center;
+  display: flex;
+  
+  &:not(:last-child) {
+    margin-right: $spacing-16px;
+  }
+}

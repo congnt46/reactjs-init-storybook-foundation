@@ -1,0 +1,28 @@
+$stacked-corner-radius: 10px;
+
+.stacked-group {
+  @include box-shadow-softer;
+  background-color: $color-white;
+  border-radius: $stacked-corner-radius;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  &__title {
+    border-bottom: $border-gray-light;
+    padding: $spacing-12px $spacing-24px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-8px 0;
+  }
+}
+
+.stacked-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0 $spacing-24px;
+  &:not(:last-child):not(.no-border) {
+    border-bottom: $border-gray-light-dashed;
+  }
+}

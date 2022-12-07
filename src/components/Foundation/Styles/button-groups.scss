@@ -1,0 +1,62 @@
+$btn-group-height: 28px;
+$btn-corner-radius: 6px;
+
+.btn-group {
+  display: flex;
+  height: $btn-group-height;
+}
+
+.btn-group__text {
+  color: $color-gray-dark;
+  padding: 0 $spacing-4px;
+  text-transform: uppercase;
+}
+
+.btn-group__item {
+  align-items: center;
+  background-color: $color-gray-lighter;
+  border: none;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  outline: none;
+  padding: 0 $spacing-8px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $color-gray-light;
+  }
+
+  .icon {
+    @extend .icon--small;
+    color: $color-gray-dark;
+  }
+
+  &.active {
+    @include box-shadow-softer;
+    background-color: $color-white;
+
+    .btn-group__text, .icon {
+      color: $color-black;
+    }
+  }
+
+  &:first-child {
+    border-bottom-left-radius: $btn-corner-radius;
+    border-top-left-radius: $btn-corner-radius;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: $btn-corner-radius;
+    border-top-right-radius: $btn-corner-radius;
+  }
+
+  .text {
+    @extend .text--bold;
+    @extend .text--small;
+    @extend .btn-group__text;
+  }
+}

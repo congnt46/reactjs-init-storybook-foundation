@@ -1,0 +1,31 @@
+$tooltip-hover-size: 16px;
+$tooltip-corner-radius: 6px;
+$tooltip-max-width: 220px;
+$tooltip-opacity: 1;
+
+.custom-tooltip {
+  display: flex;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__content {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    height: $tooltip-hover-size;
+    justify-content: center;
+    width: $tooltip-hover-size;
+  }
+  &__popup {
+    @include box-shadow-medium;
+    @include text-semibold;
+    @include text-small;
+    background-color: $overlay-black-strong!important;
+    border-radius: $tooltip-corner-radius!important;
+    max-width: $tooltip-max-width;
+    opacity: $tooltip-opacity!important;
+    padding: $spacing-4px $spacing-8px $spacing-8px!important;
+  }
+}

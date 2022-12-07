@@ -1,0 +1,82 @@
+$modal-width-medium: 616px;
+$modal-width-small: 434px;
+$modal-width-large: 707px;
+$modal-offset-top: 112px;
+$modal-corner-radius: 16px;
+$header-height: 48px;
+$footer-height: 64px;
+
+.modal-container {
+  background-color: $overlay-black-strong;
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99;
+
+  &.open {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+
+  &:not(.disabled):hover {
+    cursor: pointer;
+  }
+}
+
+.modal {
+  @include box-shadow-strong;
+  background-color: $color-white;
+  border-radius: $modal-corner-radius;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: $spacing-8px $spacing-22px 0 $spacing-24px;
+  position: relative;
+  top: $modal-offset-top;
+  width: $modal-width-medium;
+  z-index: 100;
+
+  &:hover {
+    cursor: initial;
+  }
+
+  &--small {
+    width: $modal-width-small;
+  }
+
+  &--large {
+    width: $modal-width-large;
+  }
+}
+
+.modal__header {
+  align-items: center;
+  display: flex;
+  height: $header-height;
+  justify-content: space-between;
+
+  .icon {
+    margin-right: -$spacing-6px;
+  }
+}
+
+.modal__body {
+  @include hide-scrollbar;
+  overflow-y: auto;
+}
+
+.modal__footer {
+  align-items: flex-end;
+  display: flex;
+  height: $footer-height;
+  padding-bottom: $spacing-20px;
+
+  .btn + .btn {
+    margin-left: $spacing-12px;
+  }
+}

@@ -1,0 +1,59 @@
+$blur-2px: 2px;
+$blur-3px: 3px;
+$blur-5px: 5px;
+$blur-6px: 6px;
+$blur-8px: 8px;
+$blur-10px: 10px;
+$blur-12px: 12px;
+$blur-24px: 24px;
+
+$spread-0px: 0;
+$spread-1px: 1px;
+$spread-n2px: -2px;
+$spread-n4px: -4px;
+$spread-n8px: -8px;
+
+$color-shadow-3: rgba(0,0,0,0.03);
+$color-shadow-4: rgba(0,0,0,0.04);
+$color-shadow-5: rgba(0,0,0,0.05);
+$color-shadow-7: rgba(0,0,0,0.07);
+$color-shadow-10: rgba(0,0,0,0.1);
+$color-shadow-15: rgba(0,0,0,0.15);
+$color-shadow-20: rgba(0,0,0,0.2);
+
+$offset-n1px: -1px;
+$offset-0px: 0;
+$offset-3px: 3px;
+$offset-4px: 4px;
+$offset-8px: 8px;
+$offset-16px: 16px;
+
+@mixin box-shadow-softer {
+  box-shadow: $offset-0px $offset-3px $blur-5px $spread-n2px $color-shadow-4,
+    $offset-0px $offset-0px $blur-8px $spread-0px $color-shadow-4;
+}
+
+@mixin box-shadow-soft {
+  box-shadow: $offset-0px $offset-3px $blur-6px $spread-n2px $color-shadow-10,
+    $offset-0px $offset-0px $blur-10px $spread-0px $color-shadow-5;
+}
+
+@mixin box-shadow-medium {
+  box-shadow: $offset-0px $offset-4px $blur-8px $spread-n2px $color-shadow-15,
+    $offset-0px $offset-0px $blur-12px $spread-0px $color-shadow-7;
+}
+
+@mixin box-shadow-strong {
+  box-shadow: $offset-0px $offset-8px $blur-12px $spread-n4px $color-shadow-15,
+    $offset-0px $offset-0px $blur-12px $spread-0px $color-shadow-7;
+}
+
+@mixin box-shadow-stronger {
+  box-shadow: $offset-0px $offset-16px $blur-24px $spread-n8px $color-shadow-20,
+    $offset-0px $offset-0px $blur-24px $spread-0px $color-shadow-10;
+}
+
+@mixin box-shadow-softer-inset {
+  box-shadow: inset $offset-0px $offset-n1px $blur-2px $spread-1px $color-shadow-3,
+    inset $offset-0px $offset-n1px $blur-3px $spread-0px $color-shadow-5;
+}

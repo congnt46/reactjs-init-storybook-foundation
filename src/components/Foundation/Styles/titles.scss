@@ -1,0 +1,170 @@
+// Font Sizes
+$title-font-size-64px: 64px;
+$title-font-size-48px: 48px;
+$title-font-size-32px: 32px;
+$title-font-size-28px: 28px;
+$title-font-size-24px: 24px;
+$title-font-size-20px: 20px;
+$title-font-size-18px: 18px;
+$title-font-size-15px: 15px;
+
+// Line heights
+$title-line-height-72px: 72px;
+$title-line-height-56px: 56px;
+$title-line-height-40px: 40px;
+$title-line-height-36px: 36px;
+$title-line-height-32px: 32px;
+$title-line-height-24px: 24px;
+$title-line-height-20px: 20px;
+
+// Font Families
+$title-medium: 'Cabin Medium';
+$title-semibold: 'Cabin SemiBold';
+$title-bold: 'Cabin Bold';
+$title-regular: 'Cabin Regular';
+
+@mixin title-64px {
+  font-size: $title-font-size-64px;
+  line-height: $title-line-height-72px;
+}
+
+@mixin title-48px {
+  font-size: $title-font-size-48px;
+  line-height: $title-line-height-56px;
+}
+
+@mixin title-32px {
+  font-size: $title-font-size-32px;
+  line-height: $title-line-height-40px;
+}
+
+@mixin title-28px {
+  font-size: $title-font-size-28px;
+  line-height: $title-line-height-36px;
+}
+
+@mixin title-24px {
+  font-size: $title-font-size-24px;
+  line-height: $title-line-height-32px;
+}
+
+@mixin title-20px {
+  font-size: $title-font-size-20px;
+  line-height: $title-line-height-24px;
+}
+
+@mixin title-18px {
+  font-size: $title-font-size-18px;
+  line-height: $title-line-height-24px;
+}
+
+@mixin title-15px {
+  font-size: $title-font-size-15px;
+  line-height: $title-line-height-20px;
+}
+
+@mixin title-medium {
+  font-family: $title-medium;
+}
+
+@mixin title-semibold {
+  font-family: $title-semibold;
+}
+
+@mixin title-bold {
+  font-family: $title-bold;
+}
+
+@mixin title-regular {
+  font-family: $title-regular;
+}
+
+.title {
+  &--64 {
+    @include title-64px;
+    @include title-medium;
+  }
+  &--48 {
+    @include title-48px;
+    @include title-medium;
+  }
+  &--32 {
+    @include title-32px;
+    @include title-medium;
+  }
+  &--28 {
+    @include title-28px;
+    @include title-medium;
+  }
+  &--24 {
+    @include title-24px;
+    @include title-semibold;
+  }
+  &--20 {
+    @include title-20px;
+    @include title-bold;
+  }
+  &--18 {
+    @include title-18px;
+    @include title-bold;
+  }
+  &--15 {
+    @include title-15px;
+    @include title-bold;
+  }
+  &--medium {
+    @include title-medium;
+  }
+  &--semibold {
+    @include title-semibold;
+  }
+  &--bold {
+    @include title-bold;
+  }
+  &--regular {
+    @include title-regular;
+  }
+}
+
+$title-theme-colors: (
+  'primary': $color-primary,
+  'black': $color-white,
+  'gray': $color-gray,
+  'white': $color-black,
+);
+
+@each $name, $color in $title-theme-colors {
+  .title--#{$name}-theme {
+    color: $color;
+  }
+}
+
+h1 {
+  @include title-48px;
+  @include title-medium;
+}
+
+h2 {
+  @include title-32px;
+  @include title-medium;
+}
+
+h3 {
+  @include title-24px;
+  @include title-semibold;
+}
+
+h4 {
+  @include title-20px;
+  @include title-bold;
+}
+
+h5 {
+  @include title-18px;
+  @include title-bold;
+}
+
+h6 {
+  @include title-15px;
+  @include title-bold;
+}
